@@ -2,11 +2,13 @@
   --black: #020203;
   --red: #ff0101;
   --white: #fff;
-  --fs-header: 20px;
+  --bg: #fbfbfb;
+  --fs-header: 16px;
   --fs-big: 48px;
   --fs-normal: 18px;
   --fs-medium: 16px;
   --fs-small: 14px;
+  --fs-xsmall: 12px;
 }
 
 /* tablet version

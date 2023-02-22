@@ -5,7 +5,7 @@ export default function Header() {
   return (
     <div className={style.container}>
       <div className={style.logoContainer}>
-        <Logo className={style.logo} />
+        <Logo width={135} className={style.logo} />
       </div>
       <nav className={style.nav}>
         <ul>
