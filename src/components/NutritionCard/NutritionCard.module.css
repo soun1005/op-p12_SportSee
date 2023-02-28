@@ -1,9 +1,8 @@
 .cardWrap {
   margin-left: 2rem;
-  width: 230px;
-  height: 85px;
+  margin-bottom: 1rem;
+  width: 80%;
   background-color: var(--bg);
-  margin-top: 1rem;
   border: 2px solid pink;
   border-radius: 5px;
   display: flex;

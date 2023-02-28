@@ -1,0 +1,44 @@
+.customTooltip {
+  background-color: var(--red);
+  border: none;
+  font-size: 10px;
+  color: var(--white);
+  padding: 10px;
+  text-align: center;
+  line-height: 4;
+}
+
+.container {
+  background-color: var(--bg);
+  padding-top: 24px;
+  padding-left: 25px;
+  padding-right: 22px;
+  border-radius: 5px;
+  border: 1px solid red;
+  /* height: cacl(100vh - 300px); */
+}
+
+.legend,
+.legendElements,
+.legend1,
+.legend2 {
+  display: flex;
+}
+
+.legend {
+  justify-content: space-between;
+  /* padding: 15px 18px; */
+  margin-bottom: 2rem;
+  margin-left: 6px;
+  margin-right: 1rem;
+}
+
+.legend1,
+.legend2 {
+  align-items: center;
+  margin-left: 1rem;
+}
+
+img {
+  margin-right: 10px;
+}

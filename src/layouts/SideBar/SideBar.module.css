@@ -1,11 +1,12 @@
 .sideBarContainer {
   width: 83px;
   background-color: black;
-  height: calc(100vh - 75px);
+  /* height: calc(100vh - 75px); */
   display: flex;
   align-items: center;
   flex-direction: column;
   /* position: absolute; */
+  /* height: 100vh; */
 }
 
 .iconContainer {

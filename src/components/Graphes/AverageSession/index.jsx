@@ -1,4 +1,4 @@
-import style from './Linechart.module.css';
+import style from './AverageSession.module.css';
 
 import {
   LineChart,
@@ -40,17 +40,17 @@ const data = [
   },
 ];
 
-export default function App() {
+export default function AverageSession() {
   return (
     <div className={style.container}>
       <h3>
         Durée moyenne des <br />
         sessions
       </h3>
-      <ResponsiveContainer width="30%" height={200}>
+      <ResponsiveContainer width="100%" height={200}>
         <LineChart
-          width={500}
-          height={300}
+          // width={500}
+          // height={300}
           data={data}
           margin={{
             top: 5,

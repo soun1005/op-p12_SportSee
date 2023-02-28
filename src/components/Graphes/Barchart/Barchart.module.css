@@ -1,9 +1,0 @@
-.customTooltip {
-  background-color: var(--red);
-  border: none;
-  font-size: 10px;
-  color: var(--white);
-  padding: 10px;
-  text-align: center;
-  line-height: 4;
-}
