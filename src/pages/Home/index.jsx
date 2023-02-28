@@ -1,18 +1,21 @@
-import NutritionCard from '../../components/NutritionCard';
+// import { useParams } from 'react-router-dom';
+import style from './Home.module.css';
 import Header from '../../layouts/Header';
+import Main from '../../layouts/Main';
 import SideBar from '../../layouts/SideBar';
-import { ReactComponent as FireIcon } from '../../assets/nutritionCardIcons/fire-icon.svg';
 
 export default function Home() {
+  // const { id } = useParams();
+
   return (
-    <div>
-      <header className="App-header">
+    <>
+      <header className={style.header}>
         <Header />
       </header>
-      <SideBar />
-      <NutritionCard nutrition="calories">
-        <FireIcon />
-      </NutritionCard>
-    </div>
+      <div className={style.main}>
+        <SideBar />
+        <Main />
+      </div>
+    </>
   );
 }

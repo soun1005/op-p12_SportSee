@@ -5,7 +5,7 @@
   display: flex;
   align-items: center;
   flex-direction: column;
-  position: absolute;
+  /* position: absolute; */
 }
 
 .iconContainer {

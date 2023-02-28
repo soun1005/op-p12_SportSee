@@ -1,9 +1,10 @@
 .cardWrap {
-  margin-left: 25rem;
+  margin-left: 2rem;
   width: 230px;
-  height: 100px;
+  height: 85px;
   background-color: var(--bg);
-  margin-top: 5rem;
-  border: 5px solid orange;
+  margin-top: 1rem;
+  border: 2px solid pink;
   border-radius: 5px;
+  display: flex;
 }

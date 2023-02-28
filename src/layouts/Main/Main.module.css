@@ -1,0 +1,22 @@
+.container {
+  width: 100%;
+  height: calc(100vh - 75px);
+  margin-left: 5rem;
+  margin-right: 5rem;
+}
+
+.mainWrap {
+  width: 100%;
+  display: flex;
+  margin-top: 4rem;
+}
+
+/* chartContainer + cardWrap's width = 100 */
+.chartContainer {
+  width: 70%;
+  /* width: 100%; */
+}
+
+.cardWrap {
+  width: 30%;
+}
