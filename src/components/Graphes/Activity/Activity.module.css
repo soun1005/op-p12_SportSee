@@ -15,7 +15,7 @@
   padding-right: 22px;
   border-radius: 5px;
   border: 1px solid red;
-  /* height: cacl(100vh - 300px); */
+  height: 100%;
 }
 
 .legend,

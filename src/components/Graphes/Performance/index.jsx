@@ -6,7 +6,6 @@ import {
   RadarChart,
   PolarGrid,
   PolarAngleAxis,
-  PolarRadiusAxis,
   ResponsiveContainer,
 } from 'recharts';
 
@@ -39,13 +38,18 @@ const data = [
 
 export default function Performance() {
   return (
-    <ResponsiveContainer width="30%" height={250} className={style.container}>
-      <RadarChart data={data}>
-        <PolarGrid />
-        <PolarAngleAxis dataKey="subject" />
-        <PolarRadiusAxis />
-        <Radar name="Mike" dataKey="A" fill="#FF0101" fillOpacity={0.7} />
-      </RadarChart>
-    </ResponsiveContainer>
+    <div className={style.container}>
+      <ResponsiveContainer width="100%" height="100%">
+        <RadarChart
+          data={data}
+          outerRadius="60%"
+          // margin={{ top: 0, right: 40, bottom: 0, left: 20 }}
+        >
+          <PolarGrid />
+          <PolarAngleAxis dataKey="subject" />
+          <Radar name="Mike" dataKey="A" fill="var(--red)" fillOpacity={0.7} />
+        </RadarChart>
+      </ResponsiveContainer>
+    </div>
   );
 }

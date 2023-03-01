@@ -1,9 +1,21 @@
 .cardWrap {
-  margin-left: 2rem;
-  margin-bottom: 1rem;
-  width: 80%;
+  width: 90%;
+  height: 100px;
   background-color: var(--bg);
   border: 2px solid pink;
   border-radius: 5px;
   display: flex;
+  align-items: center;
+}
+
+.nutritionInfo {
+  display: flex;
+  flex-direction: column;
+}
+
+@media (max-width: 1200px) {
+  .cardWrap {
+    width: 23%;
+    height: 60px;
+  }
 }

@@ -1,40 +1,31 @@
-import { PieChart, Pie, Label, Cell, ResponsiveContainer } from 'recharts';
+import { PieChart, Pie, Cell, ResponsiveContainer } from 'recharts';
 import style from './Score.module.css';
 
 const data = [
-  { name: 'Score', value: 10 },
-  { name: 'EmptyScore', value: 4 },
+  { id: '1', name: 'L1', value: 75 },
+  { id: '2', name: 'L2', value: 25 },
 ];
 
 export default function Score() {
   return (
     <div className={style.container}>
       <ResponsiveContainer>
-        <PieChart width={730} height={250}>
+        <PieChart width="100%" height="100%">
+          <text x={25} y={25} textAnchor="middle" dominantBaseline="middle">
+            25
+          </text>
           <Pie
             data={data}
-            cx="50%"
-            cy="50%"
             dataKey="value"
-            innerRadius={70}
-            outerRadius={80}
+            innerRadius="80%"
+            outerRadius="100%"
+            fill="#82ca9d"
+            startAngle={90}
+            endAngle={-270}
+            paddingAngle={0}
+            cornerRadius={5}
           >
-            {data.map((entry, index) => {
-              if (index === 1) {
-                return <Cell key={`cell-${index}`} fill="#f3f6f9" />;
-              }
-              return <Cell key={`cell-${index}`} fill="#E60000" />;
-            })}
-            <Label
-              value={data[0].value}
-              position="center"
-              fill="grey"
-              style={{
-                fontSize: '32px',
-                fontWeight: 'bold',
-                fontFamily: 'Roboto',
-              }}
-            />
+            <Cell key="test" fill="#CCC" />
           </Pie>
         </PieChart>
       </ResponsiveContainer>

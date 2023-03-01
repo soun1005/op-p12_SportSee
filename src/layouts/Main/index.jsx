@@ -16,34 +16,38 @@ import { ReactComponent as BurgerIcon } from '../../assets/nutritionCardIcons/ch
 export default function Main() {
   return (
     <div className={style.container}>
-      <div className={style.wrap}>
-        <Greetings name="Soeun" />
-        {/* all charts in chartContainer */}
-        <div className={style.mainWrap}>
-          <div className={style.chartContainer}>
+      {/* <div className={style.wrap}> */}
+      <Greetings name="Soeun" />
+      {/* all charts in chartContainer */}
+      <div className={style.mainWrap}>
+        <div className={style.chartContainer}>
+          <div className={style.activityChartWrap}>
             <Activity />
-            <div className={style.bottomCharts}>
-              <AverageSession />
-              <Performance />
-              <Score />
-            </div>
           </div>
-          <div className={style.cardWrap}>
-            <NutritionCard value="calories" nutrition="Calories">
-              <FireIcon />
-            </NutritionCard>
-            <NutritionCard value="protein" nutrition="Proteins">
-              <ChickenIcon />
-            </NutritionCard>
-            <NutritionCard value="glucide" nutrition="Glucides">
-              <AppleIcon />
-            </NutritionCard>
-            <NutritionCard value="lipid" nutrition="Lipides">
-              <BurgerIcon />
-            </NutritionCard>
+
+          {/* three charts under activity chart */}
+          <div className={style.bottomCharts}>
+            <AverageSession />
+            <Performance />
+            <Score />
           </div>
         </div>
+        <div className={style.cardWrap}>
+          <NutritionCard value="calories" nutrition="Calories">
+            <FireIcon width={45} />
+          </NutritionCard>
+          <NutritionCard value="protein" nutrition="Proteins">
+            <ChickenIcon width={45} />
+          </NutritionCard>
+          <NutritionCard value="glucide" nutrition="Glucides">
+            <AppleIcon width={45} />
+          </NutritionCard>
+          <NutritionCard value="lipid" nutrition="Lipides">
+            <BurgerIcon width={45} />
+          </NutritionCard>
+        </div>
       </div>
+      {/* </div> */}
     </div>
   );
 }

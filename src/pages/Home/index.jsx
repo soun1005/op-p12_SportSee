@@ -12,10 +12,10 @@ export default function Home() {
       <header className={style.header}>
         <Header />
       </header>
-      <div className={style.main}>
+      <main className={style.main}>
         <SideBar />
         <Main />
-      </div>
+      </main>
     </>
   );
 }

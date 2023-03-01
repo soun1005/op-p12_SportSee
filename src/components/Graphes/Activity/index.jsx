@@ -84,16 +84,14 @@ export default function Activity() {
         </div>
       </div>
 
-      <ResponsiveContainer width="100%" height={220}>
+      <ResponsiveContainer width="100%" height="80%">
         <BarChart
           data={data}
-          margin={{
-            top: 0,
-            right: 5,
-            left: 5,
-            bottom: 0,
-          }}
-          barGap={0}
+          // barGap={-37}
+          // barCategoryGap={30}
+          barGap={'5%'}
+          margin={0}
+          barSize={8}
         >
           <CartesianGrid strokeDasharray="2 2" vertical={false} />
           <XAxis
@@ -131,7 +129,7 @@ export default function Activity() {
             fill="#282D30"
             radius={[20, 20, 0, 0]}
             animationDuration={1000}
-            maxBarSize={12}
+            maxBarSize={6}
             legendType="circle"
           />
           <Bar
@@ -140,7 +138,7 @@ export default function Activity() {
             fill="#E60000"
             radius={[20, 20, 0, 0]}
             animationDuration={1000}
-            maxBarSize={12}
+            maxBarSize={6}
             legendType="circle"
           />
         </BarChart>

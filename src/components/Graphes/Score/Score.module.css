@@ -1,3 +1,5 @@
 .container {
-  width: 30%;
+  width: 32%;
+  height: 95%;
+  background-color: var(--bg);
 }
