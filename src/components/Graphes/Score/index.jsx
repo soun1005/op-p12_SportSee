@@ -1,31 +1,51 @@
 import { PieChart, Pie, Cell, ResponsiveContainer } from 'recharts';
-import style from './Score.module.css';
+import style from './ScoreChart.module.css';
 
-const data = [
-  { id: '1', name: 'L1', value: 75 },
-  { id: '2', name: 'L2', value: 25 },
-];
+const COLORS = ['red', 'transparent'];
 
-export default function Score() {
+export default function ScoreChart() {
+  // temporary data
+  const score = 0.29;
+  const bgData = [{ name: 'Group A', value: 400 }];
+  const scoreData = [
+    { name: 'A1', value: score },
+    { name: 'A2', value: 1 - score },
+  ];
+
   return (
     <div className={style.container}>
-      <ResponsiveContainer>
-        <PieChart width="100%" height="100%">
-          <text x={25} y={25} textAnchor="middle" dominantBaseline="middle">
-            25
-          </text>
+      <ResponsiveContainer width="100%" height="100%">
+        <PieChart>
+          {/* empty ring */}
           <Pie
-            data={data}
+            data={bgData}
             dataKey="value"
-            innerRadius="80%"
-            outerRadius="100%"
-            fill="#82ca9d"
+            // cx={200}
+            // cy={200}
+            innerRadius={90}
+            outerRadius={100}
+            blendStroke={true}
+            fill="#e0e0e0"
+          />
+          <Pie
+            data={scoreData}
+            dataKey="value"
+            // cx={200}
+            // cy={200}
+            innerRadius={90}
+            outerRadius={100}
+            // fill="red"
             startAngle={90}
-            endAngle={-270}
-            paddingAngle={0}
-            cornerRadius={5}
+            endAngle={450}
+            cornerRadius="50%"
+            blendStroke={true}
           >
-            <Cell key="test" fill="#CCC" />
+            {scoreData.map((entry, index) => (
+              <Cell
+                key={`cell-${index}`}
+                fill={COLORS[index % COLORS.length]}
+              />
+            ))}
           </Pie>
         </PieChart>
       </ResponsiveContainer>
