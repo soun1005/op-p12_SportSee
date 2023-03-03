@@ -36,8 +36,8 @@ export default function Main() {
 
           {/* three charts under activity chart */}
           <div className={style.bottomCharts}>
-            <AverageSession />
-            <Performance />
+            <AverageSession data={data.averageSection} />
+            <Performance data={data.performanceSection} />
             <Score />
           </div>
         </div>

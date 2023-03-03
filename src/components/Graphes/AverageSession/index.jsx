@@ -1,3 +1,4 @@
+/* eslint-disable react/prop-types */
 import style from './AverageSession.module.css';
 
 import {
@@ -9,38 +10,38 @@ import {
   ResponsiveContainer,
 } from 'recharts';
 
-const data = [
-  {
-    day: 1,
-    sessionLength: 30,
-  },
-  {
-    day: 2,
-    sessionLength: 40,
-  },
-  {
-    day: 3,
-    sessionLength: 50,
-  },
-  {
-    day: 4,
-    sessionLength: 30,
-  },
-  {
-    day: 5,
-    sessionLength: 30,
-  },
-  {
-    day: 6,
-    sessionLength: 50,
-  },
-  {
-    day: 7,
-    sessionLength: 50,
-  },
-];
+// const data = [
+//   {
+//     day: 1,
+//     sessionLength: 30,
+//   },
+//   {
+//     day: 2,
+//     sessionLength: 40,
+//   },
+//   {
+//     day: 3,
+//     sessionLength: 50,
+//   },
+//   {
+//     day: 4,
+//     sessionLength: 30,
+//   },
+//   {
+//     day: 5,
+//     sessionLength: 30,
+//   },
+//   {
+//     day: 6,
+//     sessionLength: 50,
+//   },
+//   {
+//     day: 7,
+//     sessionLength: 50,
+//   },
+// ];
 
-export default function AverageSession() {
+export default function AverageSession({ data }) {
   return (
     <div className={style.container}>
       <h3>
