@@ -13,43 +13,43 @@ import {
   ResponsiveContainer,
 } from 'recharts';
 
-const data = [
-  {
-    day: 1,
-    weight: 80,
-    calorie: 240,
-  },
-  {
-    day: 2,
-    weight: 78,
-    calorie: 100,
-  },
-  {
-    day: 3,
-    weight: 79,
-    calorie: 200,
-  },
-  {
-    day: 4,
-    weight: 80,
-    calorie: 240,
-  },
-  {
-    day: 5,
-    weight: 82,
-    calorie: 300,
-  },
-  {
-    day: 6,
-    weight: 80,
-    calorie: 240,
-  },
-  {
-    day: 7,
-    weight: 81,
-    calorie: 220,
-  },
-];
+// const data = [
+//   {
+//     day: 1,
+//     kilogram: 80,
+//     calories: 240,
+//   },
+//   {
+//     day: 2,
+//     kilogram: 78,
+//     calories: 100,
+//   },
+//   {
+//     day: 3,
+//     kilogram: 79,
+//     calories: 200,
+//   },
+//   {
+//     day: 4,
+//     kilogram: 80,
+//     calories: 240,
+//   },
+//   {
+//     day: 5,
+//     kilogram: 82,
+//     calories: 300,
+//   },
+//   {
+//     day: 6,
+//     kilogram: 80,
+//     calories: 240,
+//   },
+//   {
+//     day: 7,
+//     kilogram: 81,
+//     calories: 220,
+//   },
+// ];
 
 const CustomTooltip = ({ active, payload }) => {
   if (active && payload && payload.length) {
@@ -63,7 +63,7 @@ const CustomTooltip = ({ active, payload }) => {
   return null;
 };
 
-export default function Activity() {
+export default function Activity({ data }) {
   return (
     <div className={style.container}>
       <div className={style.legend}>
@@ -79,20 +79,13 @@ export default function Activity() {
             <span>
               <img src={RedDot} alt="point rouge" />
             </span>
-            Calories Brulées (kCal)
+            caloriess Brulées (kCal)
           </div>
         </div>
       </div>
 
       <ResponsiveContainer width="100%" height="80%">
-        <BarChart
-          data={data}
-          // barGap={-37}
-          // barCategoryGap={30}
-          barGap={'5%'}
-          margin={0}
-          barSize={8}
-        >
+        <BarChart data={data} barGap={'5%'} margin={0} barSize={8}>
           <CartesianGrid strokeDasharray="2 2" vertical={false} />
           <XAxis
             dataKey="day"
@@ -102,7 +95,7 @@ export default function Activity() {
           />
           <YAxis
             yAxisId="kg"
-            dataKey="weight"
+            dataKey="kilogram"
             domain={['dataMin - 1', 'dataMax + 1']}
             allowDecimals={false}
             orientation="right"
@@ -113,8 +106,8 @@ export default function Activity() {
           />
           <YAxis
             yAxisId="cal"
-            dataKey="calorie"
-            // set the bars height to be the maximum data of Calorie
+            dataKey="calories"
+            // set the bars height to be the maximum data of calories
             domain={[0, 'dataMax']}
             hide={true}
             tickCount={3}
@@ -125,7 +118,7 @@ export default function Activity() {
           />
           <Bar
             yAxisId="kg"
-            dataKey="weight"
+            dataKey="kilogram"
             fill="#282D30"
             radius={[20, 20, 0, 0]}
             animationDuration={1000}
@@ -134,7 +127,7 @@ export default function Activity() {
           />
           <Bar
             yAxisId="cal"
-            dataKey="calorie"
+            dataKey="calories"
             fill="#E60000"
             radius={[20, 20, 0, 0]}
             animationDuration={1000}

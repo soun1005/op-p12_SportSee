@@ -6,6 +6,7 @@ import Activity from '../../components/Graphes/Activity';
 import AverageSession from '../../components/Graphes/AverageSession';
 import Performance from '../../components/Graphes/Performance';
 import Score from '../../components/Graphes/Score';
+import useFetch from '../../hooks/useFetch';
 
 // icons
 import { ReactComponent as FireIcon } from '../../assets/nutritionCardIcons/fire-icon.svg';
@@ -14,6 +15,13 @@ import { ReactComponent as ChickenIcon } from '../../assets/nutritionCardIcons/c
 import { ReactComponent as BurgerIcon } from '../../assets/nutritionCardIcons/cheeseburger-icon.svg';
 
 export default function Main() {
+  const { data, loading, error } = useFetch();
+
+  // loading + no error   or   no data + no error
+  if ((loading || !data) && !error) {
+    return <div>loading...</div>;
+  }
+
   return (
     <div className={style.container}>
       {/* <div className={style.wrap}> */}
@@ -22,7 +30,8 @@ export default function Main() {
       <div className={style.mainWrap}>
         <div className={style.chartContainer}>
           <div className={style.activityChartWrap}>
-            <Activity />
+            {/* key on global format file */}
+            <Activity data={data.activitySection} />
           </div>
 
           {/* three charts under activity chart */}
