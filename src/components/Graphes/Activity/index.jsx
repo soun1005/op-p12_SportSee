@@ -13,44 +13,6 @@ import {
   ResponsiveContainer,
 } from 'recharts';
 
-// const data = [
-//   {
-//     day: 1,
-//     kilogram: 80,
-//     calories: 240,
-//   },
-//   {
-//     day: 2,
-//     kilogram: 78,
-//     calories: 100,
-//   },
-//   {
-//     day: 3,
-//     kilogram: 79,
-//     calories: 200,
-//   },
-//   {
-//     day: 4,
-//     kilogram: 80,
-//     calories: 240,
-//   },
-//   {
-//     day: 5,
-//     kilogram: 82,
-//     calories: 300,
-//   },
-//   {
-//     day: 6,
-//     kilogram: 80,
-//     calories: 240,
-//   },
-//   {
-//     day: 7,
-//     kilogram: 81,
-//     calories: 220,
-//   },
-// ];
-
 const CustomTooltip = ({ active, payload }) => {
   if (active && payload && payload.length) {
     return (

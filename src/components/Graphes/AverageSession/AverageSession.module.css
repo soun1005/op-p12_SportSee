@@ -14,3 +14,13 @@
   top: 1rem;
   left: 1rem;
 }
+
+.customTooltip {
+  background-color: var(--white);
+  border: none;
+  font-size: 10px;
+  color: var(--black);
+  padding: 0 10px;
+  text-align: center;
+  line-height: 4;
+}

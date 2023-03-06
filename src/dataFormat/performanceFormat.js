@@ -31,10 +31,31 @@
 //   },
 // ];
 
-const performanceFormat = (data) => {
-  return data.map(({ value, kind }) => ({
-    subject: kind,
-    value: value,
+// const kindToData = (kind) => {
+//   // kind = 1 to 6
+//   // console.log(kind);
+// };
+
+const performanceFormat = (chartData) => {
+  // const { kind, data } = chartData;
+  // console.log('chartData', chartData);
+  const categories = chartData.kind;
+  const displayingData = chartData.data;
+
+  console.log('categories:', categories);
+  console.log('displayingData:', displayingData);
+
+  // categories의 값을 displayData의 값으로 대체하기.
+  // map을 displayData에 돌려서, kind값을 categories값으로 대체하기
+
+  // return data.map(({ data, kind }) =>
+  //   console.log('data:', data, 'kind:', kind)
+  //   // subject: kindToData(kind),
+  //   // value: value,
+  // );
+  return displayingData.map(({ value, kind }) => ({
+    subject: categories[kind],
+    value,
   }));
 };
 

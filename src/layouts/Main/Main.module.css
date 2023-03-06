@@ -30,8 +30,7 @@
 
 /* activityChartWrap + bottomCharts height = 100 */
 .activityChartWrap {
-  height: 18rem;
-  background-color: red;
+  height: 14rem;
 }
 
 .bottomCharts {
