@@ -38,7 +38,7 @@ export default function Main() {
           <div className={style.bottomCharts}>
             <AverageSession data={data.averageSection} />
             <Performance data={data.performanceSection} />
-            <Score />
+            <Score data={data.scoreSection} />
           </div>
         </div>
         <div className={style.cardWrap}>

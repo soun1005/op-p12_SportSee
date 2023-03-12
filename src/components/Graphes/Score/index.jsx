@@ -1,16 +1,12 @@
+/* eslint-disable react/prop-types */
 import { PieChart, Pie, Cell, ResponsiveContainer } from 'recharts';
 import style from './ScoreChart.module.css';
 
 const COLORS = ['red', 'transparent'];
 
-export default function ScoreChart() {
-  // temporary data
-  const score = 0.29;
-  const bgData = [{ name: 'Group A', value: 400 }];
-  const scoreData = [
-    { name: 'A1', value: score },
-    { name: 'A2', value: 1 - score },
-  ];
+export default function ScoreChart({ data }) {
+  const bgData = [{ value: 1 }];
+  const scoreData = [{ value: data }, { value: 1 - data }];
 
   return (
     <div className={style.container}>
@@ -20,21 +16,17 @@ export default function ScoreChart() {
           <Pie
             data={bgData}
             dataKey="value"
-            // cx={200}
-            // cy={200}
             innerRadius={90}
             outerRadius={100}
             blendStroke={true}
+            isAnimationActive={false}
             fill="#e0e0e0"
           />
           <Pie
             data={scoreData}
             dataKey="value"
-            // cx={200}
-            // cy={200}
             innerRadius={90}
             outerRadius={100}
-            // fill="red"
             startAngle={90}
             endAngle={450}
             cornerRadius="50%"
