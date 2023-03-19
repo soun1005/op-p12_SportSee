@@ -47,7 +47,7 @@ export default function Activity({ data }) {
       </div>
 
       <ResponsiveContainer width="100%" height="80%">
-        <BarChart data={data} barGap={'5%'} margin={0} barSize={8}>
+        <BarChart data={data} barGap={'6%'} margin={0} barSize={8}>
           <CartesianGrid strokeDasharray="2 2" vertical={false} />
           <XAxis
             dataKey="day"
@@ -64,15 +64,15 @@ export default function Activity({ data }) {
             tickMargin={20}
             axisLine={false}
             tickLine={false}
-            tickCount={3}
+            tickCount={4}
           />
           <YAxis
             yAxisId="cal"
             dataKey="calories"
             // set the bars height to be the maximum data of calories
-            domain={[0, 'dataMax']}
+            domain={[0, 'dataMax + 1']}
             hide={true}
-            tickCount={3}
+            tickCount={4}
           />
           <Tooltip
             content={<CustomTooltip />}

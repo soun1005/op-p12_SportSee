@@ -32,19 +32,26 @@ export default function AverageSession({ data }) {
         <LineChart
           data={data}
           margin={{
-            top: 60,
+            top: 100,
             right: 0,
             left: 0,
-            bottom: 0,
+            bottom: 60,
           }}
         >
+          <defs>
+            <linearGradient id="lineGradient" x1="0" y1="0" x2="1" y2="0">
+              <stop offset="0%" stopColor="var(--white)" stopOpacity={0.2} />
+              <stop offset="100%" stopColor="var(--white)" stopOpacity={1} />
+            </linearGradient>
+          </defs>
+
+          <YAxis hide={true} />
           <XAxis
             dataKey="day"
             tickLine={false}
             axisLine={false}
             stroke="#fff"
           />
-          <YAxis hide={true} />
           <Tooltip
             content={<CustomTooltip />}
             wrapperStyle={{ outline: 'none' }}
@@ -52,10 +59,11 @@ export default function AverageSession({ data }) {
           <Line
             type="natural"
             dataKey="sessionLength"
-            stroke="#fff"
+            // stroke="#fff"
             dot={false}
             activeDot={{ r: 4 }}
             strokeWidth={3}
+            stroke="url(#lineGradient)"
           />
         </LineChart>
       </ResponsiveContainer>

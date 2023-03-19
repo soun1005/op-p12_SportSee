@@ -6,14 +6,14 @@ const scoreFormat = (data) => {
   // data.map((el) => console.log(el));
   // console.log(todayScore);
 
-  if (score) {
-    console.log('score', score);
-    return score;
-  } else {
-    console.log('todayScore', todayScore);
-    // change this to 'score'
-    return todayScore;
-  }
+  return score || todayScore;
+
+  // if (score) {
+  //   return score;
+  // } else {
+  //   // change this to 'score'
+  //   return todayScore;
+  // }
 };
 
 export default scoreFormat;

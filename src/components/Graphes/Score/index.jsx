@@ -1,5 +1,5 @@
 /* eslint-disable react/prop-types */
-import { PieChart, Pie, Cell, ResponsiveContainer } from 'recharts';
+import { PieChart, Pie, Cell, ResponsiveContainer, Label } from 'recharts';
 import style from './ScoreChart.module.css';
 
 const COLORS = ['red', 'transparent'];
@@ -10,6 +10,7 @@ export default function ScoreChart({ data }) {
 
   return (
     <div className={style.container}>
+      <p className={style.title}>Score</p>
       <ResponsiveContainer width="100%" height="100%">
         <PieChart>
           {/* empty ring */}
@@ -21,7 +22,24 @@ export default function ScoreChart({ data }) {
             blendStroke={true}
             isAnimationActive={false}
             fill="#e0e0e0"
-          />
+          >
+            <Label
+              value={`${Math.round(data * 100)}%`}
+              position="center"
+              dx={0}
+              dy={-10}
+              fill="var(--black)"
+              style={{ fontSize: '1.5rem', fontWeight: 'bold' }}
+            />
+            <Label
+              value="de votre objectif"
+              position="center"
+              dx={0}
+              dy={20}
+              fill="var(--grey)"
+              style={{ fontSize: '14px' }}
+            />
+          </Pie>
           <Pie
             data={scoreData}
             dataKey="value"

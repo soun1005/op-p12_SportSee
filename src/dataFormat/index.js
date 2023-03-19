@@ -16,14 +16,32 @@ const globalFormat = (data) => {
 
   // performance chart
   const performanceSection = performanceFormat(data.USER_PERFORMANCE[0]);
-  // console.log('performanceSection', performanceSection);
 
   // score chart
   const scoreSection = scoreFormat(data.USER_MAIN_DATA[0]);
-  // console.log('scoreSection:', scoreSection);
+
+  // name display
+  const nameDisplay = data.USER_MAIN_DATA[0].userInfos.firstName;
+
+  // nutrition card display
+  const nutriCard = data.USER_MAIN_DATA[0].keyData;
+  const calories = `${nutriCard.calorieCount}kCal`;
+  const protein = `${nutriCard.proteinCount}g`;
+  const carbo = `${nutriCard.carbohydrateCount}g`;
+  const lipid = `${nutriCard.lipidCount}g`;
 
   // returned values are called in Main.jsx with 'useFetch'
-  return { activitySection, averageSection, performanceSection, scoreSection };
+  return {
+    activitySection,
+    averageSection,
+    performanceSection,
+    scoreSection,
+    nameDisplay,
+    calories,
+    protein,
+    carbo,
+    lipid,
+  };
 };
 
 export default globalFormat;

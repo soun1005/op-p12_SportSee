@@ -25,7 +25,7 @@ export default function Main() {
   return (
     <div className={style.container}>
       {/* <div className={style.wrap}> */}
-      <Greetings name="Soeun" />
+      <Greetings name={data.nameDisplay} />
       {/* all charts in chartContainer */}
       <div className={style.mainWrap}>
         <div className={style.chartContainer}>
@@ -42,16 +42,16 @@ export default function Main() {
           </div>
         </div>
         <div className={style.cardWrap}>
-          <NutritionCard value="calories" nutrition="Calories">
+          <NutritionCard value={data.calories} nutrition="Calories">
             <FireIcon width={45} />
           </NutritionCard>
-          <NutritionCard value="protein" nutrition="Proteins">
+          <NutritionCard value={data.protein} nutrition="Proteins">
             <ChickenIcon width={45} />
           </NutritionCard>
-          <NutritionCard value="glucide" nutrition="Glucides">
+          <NutritionCard value={data.carbo} nutrition="Glucides">
             <AppleIcon width={45} />
           </NutritionCard>
-          <NutritionCard value="lipid" nutrition="Lipides">
+          <NutritionCard value={data.lipid} nutrition="Lipides">
             <BurgerIcon width={45} />
           </NutritionCard>
         </div>

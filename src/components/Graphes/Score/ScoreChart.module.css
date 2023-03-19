@@ -2,4 +2,11 @@
   width: 32%;
   height: 95%;
   background-color: var(--bg);
+  position: relative;
+}
+
+.title {
+  position: absolute;
+  top: 22px;
+  left: 22px;
 }
