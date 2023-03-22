@@ -35,7 +35,7 @@ export default function AverageSession({ data }) {
             top: 100,
             right: 0,
             left: 0,
-            bottom: 60,
+            bottom: 16,
           }}
         >
           <defs>
@@ -45,7 +45,7 @@ export default function AverageSession({ data }) {
             </linearGradient>
           </defs>
 
-          <YAxis hide={true} />
+          <YAxis hide={true} domain={['dataMin - 20', 'dataMax']} />
           <XAxis
             dataKey="day"
             tickLine={false}

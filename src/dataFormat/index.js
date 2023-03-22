@@ -3,28 +3,31 @@ import averageSessionFormat from './averageSessionFormat';
 import performanceFormat from './performanceFormat';
 import scoreFormat from './scoreFormat';
 
-const globalFormat = (data) => {
+const globalFormat = ({
+  activitySessions,
+  performances,
+  user,
+  averageSessions,
+}) => {
   // first data for testing
 
   // activity chart
-  const activitySection = activityFormat(data.USER_ACTIVITY[0].sessions);
 
+  const activitySection = activityFormat(activitySessions);
   // average chart
-  const averageSection = averageSessionFormat(
-    data.USER_AVERAGE_SESSIONS[0].sessions
-  );
+  const averageSection = averageSessionFormat(averageSessions);
 
   // performance chart
-  const performanceSection = performanceFormat(data.USER_PERFORMANCE[0]);
+  const performanceSection = performanceFormat(performances);
 
   // score chart
-  const scoreSection = scoreFormat(data.USER_MAIN_DATA[0]);
+  const scoreSection = scoreFormat(user);
 
   // name display
-  const nameDisplay = data.USER_MAIN_DATA[0].userInfos.firstName;
+  const nameDisplay = user.userInfos.firstName;
 
   // nutrition card display
-  const nutriCard = data.USER_MAIN_DATA[0].keyData;
+  const nutriCard = user.keyData;
   const calories = `${nutriCard.calorieCount}kCal`;
   const protein = `${nutriCard.proteinCount}g`;
   const carbo = `${nutriCard.carbohydrateCount}g`;
