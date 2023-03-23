@@ -1,7 +1,7 @@
-/* eslint-disable react/prop-types */
 import style from './Activity.module.css';
 import BlackDot from '../../../assets/blackdot.png';
 import RedDot from '../../../assets/reddot.png';
+import PropTypes from 'prop-types';
 
 import {
   BarChart,
@@ -101,3 +101,12 @@ export default function Activity({ data }) {
     </div>
   );
 }
+
+CustomTooltip.propTypes = {
+  active: PropTypes.bool,
+  payload: PropTypes.array,
+};
+
+Activity.propTypes = {
+  data: PropTypes.array.isRequired,
+};

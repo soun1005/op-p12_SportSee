@@ -21,6 +21,9 @@ export default function Main() {
   if ((loading || !data) && !error) {
     return <div>loading...</div>;
   }
+  if (error && !loading) {
+    return <div>{error}</div>;
+  }
 
   return (
     <div className={style.container}>
@@ -56,7 +59,6 @@ export default function Main() {
           </NutritionCard>
         </div>
       </div>
-      {/* </div> */}
     </div>
   );
 }

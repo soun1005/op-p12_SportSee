@@ -1,5 +1,5 @@
-/* eslint-disable react/prop-types */
 import style from './AverageSession.module.css';
+import PropTypes from 'prop-types';
 
 import {
   LineChart,
@@ -70,3 +70,12 @@ export default function AverageSession({ data }) {
     </div>
   );
 }
+
+CustomTooltip.propTypes = {
+  active: PropTypes.bool,
+  payload: PropTypes.array,
+};
+
+AverageSession.propTypes = {
+  data: PropTypes.array.isRequired,
+};

@@ -1,5 +1,5 @@
-/* eslint-disable react/prop-types */
 import style from './Performance.module.css';
+import PropTypes from 'prop-types';
 
 import React from 'react';
 import {
@@ -32,3 +32,7 @@ export default function Performance({ data }) {
     </div>
   );
 }
+
+Performance.propTypes = {
+  data: PropTypes.array.isRequired,
+};

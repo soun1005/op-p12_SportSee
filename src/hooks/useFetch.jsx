@@ -32,17 +32,16 @@ export default function useFetch() {
   const [loading, setLoading] = useState(false);
 
   useEffect(() => {
-    try {
-      setLoading(true);
-      getUserInfo(id).then((userInfos) => {
+    setLoading(true);
+    getUserInfo(id)
+      .then((userInfos) => {
         const formatApi = formatApiResponse(userInfos);
         const formattedData = globalFormat(formatApi);
         setData(formattedData);
         setError(null);
-      });
-    } catch (e) {
-      setError(e);
-    }
+      })
+      .catch((e) => setError(e.response.data));
+
     setLoading(false);
   }, []);
 

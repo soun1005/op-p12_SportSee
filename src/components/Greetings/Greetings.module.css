@@ -1,6 +1,16 @@
 .container {
-  height: 11rem;
+  height: 9rem;
   display: flex;
   flex-direction: column;
   justify-content: center;
+}
+
+.greetings,
+.name {
+  font-size: 2.25rem;
+}
+
+.name {
+  margin-left: 5px;
+  color: var(--red);
 }

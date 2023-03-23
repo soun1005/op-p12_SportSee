@@ -1,6 +1,6 @@
-/* eslint-disable react/prop-types */
 import { PieChart, Pie, Cell, ResponsiveContainer, Label } from 'recharts';
 import style from './ScoreChart.module.css';
+import PropTypes from 'prop-types';
 
 const COLORS = ['red', 'transparent'];
 
@@ -62,3 +62,7 @@ export default function ScoreChart({ data }) {
     </div>
   );
 }
+
+ScoreChart.propTypes = {
+  data: PropTypes.number.isRequired,
+};

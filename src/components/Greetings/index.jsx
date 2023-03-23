@@ -6,7 +6,10 @@ export default function Greetings(props) {
   const { name } = props;
   return (
     <div className={style.container}>
-      <h1>Bonjour {name}</h1>
+      <div className={style.wrap}>
+        <span className={style.greetings}>Bonjour</span>
+        <span className={style.name}>{name}</span>
+      </div>
       <span>Félicitation ! Vous avez explosé vos objectifs hier 👏</span>
     </div>
   );
