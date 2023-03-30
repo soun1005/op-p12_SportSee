@@ -262,7 +262,6 @@ const USER_PERFORMANCE = [
 ];
 
 export default function getMockData(id) {
-  console.log(id);
   if (id !== 12 && id !== 18) {
     return null;
   }

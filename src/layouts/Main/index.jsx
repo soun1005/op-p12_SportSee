@@ -13,20 +13,18 @@ import { ReactComponent as FireIcon } from '../../assets/nutritionCardIcons/fire
 import { ReactComponent as AppleIcon } from '../../assets/nutritionCardIcons/apple-icon.svg';
 import { ReactComponent as ChickenIcon } from '../../assets/nutritionCardIcons/chicken-icon.svg';
 import { ReactComponent as BurgerIcon } from '../../assets/nutritionCardIcons/cheeseburger-icon.svg';
+import DataSource from '../../components/DataSource';
 
 export default function Main() {
-  const { data, loading, error } = useFetch();
+  const { data, loading, dataSource } = useFetch();
 
-  // loading + no error   or   no data + no error
-  if ((loading || !data) && !error) {
+  if (loading || !data) {
     return <div>loading...</div>;
-  }
-  if (error && !loading) {
-    return <div>{error}</div>;
   }
 
   return (
     <div className={style.container}>
+      <DataSource source={dataSource} />
       {/* <div className={style.wrap}> */}
       <Greetings name={data.nameDisplay} />
       {/* all charts in chartContainer */}

@@ -38,7 +38,7 @@ const formatApiResponse = (data) => {
 
 /**
  * A hook that fetches data
- * @returns {Array<Object>} three states in a form of object to manage data, error and loading
+ * @returns {Array<Object>} three states in a form of object to manage data and loading
  */
 
 export default function useFetch() {
@@ -46,35 +46,43 @@ export default function useFetch() {
   const navigate = useNavigate();
 
   const [data, setData] = useState(null);
-  const [error, setError] = useState(false);
   const [loading, setLoading] = useState(false);
+  const [dataSource, setDataSource] = useState('API');
 
+  // when the page is loaded
   useEffect(() => {
     setLoading(true);
+    // get user info by id
     getUserInfo(id)
       .then((userInfos) => {
+        // first format matched data by breakpoints
         const formatApi = formatApiResponse(userInfos);
+        // then using globalFormat, format data to display charts
         const formattedData = globalFormat(formatApi);
+        // then set data
         setData(formattedData);
-        setError(null);
+        console.log('using API');
       })
+      // when API fails
       .catch((e) => {
-        // when API fails
-        // console.log(e);
-
+        // if there is error code from API
         if (e.code === 'ERR_NETWORK') {
+          // set mock data as mockData(and transform id string into number)
           const mockData = getMockData(parseInt(id, 10));
+
+          console.log('using mock data');
+          setDataSource('Mock Data');
+
           // if there's no mock data found
           if (!mockData) {
-            setError('User not found');
+            // setError('User not found');
+            navigate('/Error');
           } else {
             // instead of API, use mock data
             const formattedMockData = globalFormat(mockData);
             setData(formattedMockData);
-            setError(null);
           }
         } else {
-          setError(e.response.data);
           navigate('/Error');
         }
       });
@@ -82,5 +90,5 @@ export default function useFetch() {
     setLoading(false);
   }, []);
 
-  return { data, error, loading };
+  return { data, loading, dataSource };
 }

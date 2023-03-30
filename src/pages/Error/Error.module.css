@@ -1,10 +1,11 @@
 .main {
-  position: relative;
+  display: flex;
 }
 
 .errorContainer {
   width: 100%;
-  height: calc(100vh - 150px);
+  /* height: calc(100vh - 150px); */
+  height: 95vh;
   display: flex;
   justify-content: center;
   flex-direction: column;
@@ -40,17 +41,4 @@
 
 .linkToHome:hover {
   background-color: var(--black);
-}
-
-/* phone version */
-@media (max-width: 480px) {
-  .error {
-    font-size: 96px;
-    font-weight: 700;
-  }
-
-  .errorMessage {
-    width: 90%;
-    text-align: center;
-  }
 }

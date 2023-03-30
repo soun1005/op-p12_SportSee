@@ -11,18 +11,6 @@
   --fs-xsmall: 12px;
 }
 
-/* tablet version
-@media (max-width: 768px) {
-  :root {
-  }
-}
-
-phone version
-@media (max-width: 480px) {
-  :root {
-  }
-} */
-
 *,
 *::before,
 *::after {
