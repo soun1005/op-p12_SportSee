@@ -261,9 +261,24 @@ const USER_PERFORMANCE = [
   },
 ];
 
-module.exports = {
-  USER_MAIN_DATA,
-  USER_ACTIVITY,
-  USER_AVERAGE_SESSIONS,
-  USER_PERFORMANCE,
-};
+export default function getMockData(id) {
+  console.log(id);
+  if (id !== 12 && id !== 18) {
+    return null;
+  }
+  const user = USER_MAIN_DATA.find((data) => data.id === id);
+  const activitySessions = USER_ACTIVITY.find(
+    (data) => data.userId === id
+  ).sessions;
+  const averageSessions = USER_AVERAGE_SESSIONS.find(
+    (data) => data.userId === id
+  ).sessions;
+  const performances = USER_PERFORMANCE.find((data) => data.userId === id);
+
+  return {
+    user,
+    activitySessions,
+    averageSessions,
+    performances,
+  };
+}

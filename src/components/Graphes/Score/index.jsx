@@ -4,6 +4,14 @@ import PropTypes from 'prop-types';
 
 const COLORS = ['red', 'transparent'];
 
+/**
+ * A chart component that displays activity bar chart based on data
+ *
+ * @param {Object} props - The props object containing data
+ * @param {number} props.data -  A number to display score chart
+ * @returns {React.ReactElement} Score chart
+ */
+
 export default function ScoreChart({ data }) {
   const bgData = [{ value: 1 }];
   const scoreData = [{ value: data }, { value: 1 - data }];

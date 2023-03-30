@@ -10,6 +10,15 @@ import {
   ResponsiveContainer,
 } from 'recharts';
 
+/**
+ * A custom tooltip component that displays data based on active state and payload values
+ *
+ * @param {Object} props - The props object containing active and payload values
+ * @param {boolean} props.active - Indicates if tooltip is active or not
+ * @param {Array<Object>} props.payload - Array of objects containing data to be displayed in tooltip
+ * @returns {JSX.Element|null} - A React component that displays tooltip or null if tooltip is inactive
+ */
+
 const CustomTooltip = ({ active, payload }) => {
   if (active && payload && payload.length) {
     return (
@@ -20,6 +29,14 @@ const CustomTooltip = ({ active, payload }) => {
   }
   return null;
 };
+
+/**
+ * A chart component that displays Average Session chart based on data
+ *
+ * @param {Object} props - The props object containing data
+ * @param {Array<Object>} props.data -  An array of data that display average session chart with
+ * @returns {React.ReactElement} Average session chart
+ */
 
 export default function AverageSession({ data }) {
   return (

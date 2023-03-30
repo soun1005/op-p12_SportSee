@@ -10,6 +10,14 @@ import {
   ResponsiveContainer,
 } from 'recharts';
 
+/**
+ * A chart component that displays performance chart based on data
+ *
+ * @param {Object} props - The props object containing data
+ * @param {Array<Object>} props.data -  An array of data that display performance chart with
+ * @returns {React.ReactElement} Performance chart
+ */
+
 export default function Performance({ data }) {
   return (
     <div className={style.container}>

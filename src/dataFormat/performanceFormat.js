@@ -1,3 +1,9 @@
+/**
+ * A function that formats object data for performance chart
+ * @param {Array<Object>} chartData - performance data
+ * @returns {Array<Object>} formatted values of user performance data to display performance chart
+ */
+
 const performanceFormat = (chartData) => {
   const categories = chartData.kind;
   const displayingData = chartData.data;

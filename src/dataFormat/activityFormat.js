@@ -1,3 +1,9 @@
+/**
+ * A function that transfers a date string into a number
+ * @param {string} date - A string containing a date
+ * @returns {number} A number formatted from the date string
+ */
+
 const stringToNum = (date) => {
   // getDate()
   const lastNumber = date.charAt(date.length - 1);
@@ -5,7 +11,12 @@ const stringToNum = (date) => {
   return toNum;
 };
 
-// data.sessions
+/**
+ * A function that formats a date string to a number
+ * @param {string} date - A string containing a date
+ * @returns {number} A number formatted from the date string
+ */
+
 const activityFormat = (sessions) => {
   // sessions.day, sessions.kilo, sessions.calories
   return sessions.map(({ day, kilogram, calories }) => ({
@@ -14,8 +25,6 @@ const activityFormat = (sessions) => {
     day: stringToNum(day),
     kilogram,
     calories,
-    // kilogram: kilogram,
-    // calories: calories,
   }));
 };
 

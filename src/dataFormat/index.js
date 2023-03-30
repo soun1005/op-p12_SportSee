@@ -3,17 +3,24 @@ import averageSessionFormat from './averageSessionFormat';
 import performanceFormat from './performanceFormat';
 import scoreFormat from './scoreFormat';
 
+/**
+ * A function that assigns each data objects into its formatting functions
+ * @param {Array<Object>} activitySessions - an object data that contains data to display activity sessions
+ *  * @param {Array<Object>} performances - an object data that contains data to display performance sessions
+ *  * @param {Array<Object>} user - an object data that contains data to display user name
+ *  * @param {Array<Object>} averageSessions - an object data that contains data to display average sessions
+ * @returns {Array<Object>} formatted values to be used as props to each chart components
+ */
+
 const globalFormat = ({
   activitySessions,
   performances,
   user,
   averageSessions,
 }) => {
-  // first data for testing
-
   // activity chart
-
   const activitySection = activityFormat(activitySessions);
+
   // average chart
   const averageSection = averageSessionFormat(averageSessions);
 

@@ -5,8 +5,6 @@ import Main from '../../layouts/Main';
 import SideBar from '../../layouts/SideBar';
 
 export default function Home() {
-  // const { id } = useParams();
-
   return (
     <>
       <header className={style.header}>
