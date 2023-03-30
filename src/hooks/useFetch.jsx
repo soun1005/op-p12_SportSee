@@ -1,6 +1,5 @@
 import { useState, useEffect } from 'react';
 import axios from 'axios';
-// import mockData from '../assets/mockApi';
 import getMockData from '../assets/mockApi';
 import globalFormat from '../dataFormat';
 import { useParams } from 'react-router-dom';
@@ -59,11 +58,14 @@ export default function useFetch() {
         setError(null);
       })
       .catch((e) => {
+        // when API fails
         if (e.code === 'ERR_NETWORK') {
           const mockData = getMockData(parseInt(id, 10));
+          // if there's no mock data found
           if (!mockData) {
             setError('User not found');
           } else {
+            // instead of API, use mock data
             const formattedMockData = globalFormat(mockData);
             setData(formattedMockData);
             setError(null);
