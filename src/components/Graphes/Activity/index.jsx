@@ -63,7 +63,7 @@ export default function Activity({ data }) {
         </div>
       </div>
 
-      <ResponsiveContainer width="100%" height="80%">
+      <ResponsiveContainer width="100%" height="85%">
         <BarChart data={data} barGap={'6%'} margin={0} barSize={8}>
           <CartesianGrid strokeDasharray="2 2" vertical={false} />
           <XAxis
@@ -75,23 +75,25 @@ export default function Activity({ data }) {
           <YAxis
             yAxisId="kg"
             dataKey="kilogram"
-            domain={['dataMin - 1', 'dataMax + 1']}
+            domain={['dataMin - 2', 'dataMax + 1']}
             allowDecimals={false}
             orientation="right"
             tickMargin={20}
             axisLine={false}
             tickLine={false}
-            tickCount={4}
+            tickCount={3}
           />
           <YAxis
             yAxisId="cal"
             dataKey="calories"
             // set the bars height to be the maximum data of calories
-            domain={[0, 'dataMax + 1']}
+            domain={[0, 'dataMax + 50']}
             hide={true}
-            tickCount={4}
+            tickCount={3}
           />
           <Tooltip
+            allowEscapeViewBox={{ x: true }}
+            offset={30}
             content={<CustomTooltip />}
             wrapperStyle={{ outline: 'none' }}
           />
