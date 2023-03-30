@@ -1,0 +1,56 @@
+.main {
+  position: relative;
+}
+
+.errorContainer {
+  width: 100%;
+  height: calc(100vh - 150px);
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  align-items: center;
+  position: absolute;
+  top: 0;
+}
+
+.textWrap {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 4rem;
+}
+
+.error,
+.errorMessage {
+  color: var(--black);
+}
+
+.error {
+  font-size: 100px;
+  font-weight: 700;
+}
+
+.linkToHome {
+  color: var(--red);
+  font-size: 14px;
+  position: absolute;
+  bottom: 0;
+}
+
+.linkToHome:hover {
+  background-color: var(--black);
+}
+
+/* phone version */
+@media (max-width: 480px) {
+  .error {
+    font-size: 96px;
+    font-weight: 700;
+  }
+
+  .errorMessage {
+    width: 90%;
+    text-align: center;
+  }
+}

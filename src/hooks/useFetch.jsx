@@ -2,7 +2,7 @@ import { useState, useEffect } from 'react';
 import axios from 'axios';
 import getMockData from '../assets/mockApi';
 import globalFormat from '../dataFormat';
-import { useParams } from 'react-router-dom';
+import { useParams, useNavigate } from 'react-router-dom';
 
 // common part of breakpoint
 const USER_URL = 'http://localhost:3000/user/';
@@ -43,6 +43,7 @@ const formatApiResponse = (data) => {
 
 export default function useFetch() {
   const { id } = useParams();
+  const navigate = useNavigate();
 
   const [data, setData] = useState(null);
   const [error, setError] = useState(false);
@@ -59,7 +60,8 @@ export default function useFetch() {
       })
       .catch((e) => {
         // when API fails
-        console.log(e);
+        // console.log(e);
+
         if (e.code === 'ERR_NETWORK') {
           const mockData = getMockData(parseInt(id, 10));
           // if there's no mock data found
@@ -73,6 +75,7 @@ export default function useFetch() {
           }
         } else {
           setError(e.response.data);
+          navigate('/Error');
         }
       });
 
