@@ -2,7 +2,7 @@ import './App.css';
 
 import { BrowserRouter, Routes, Route, Navigate } from 'react-router-dom';
 import Home from './pages/Home';
-import Error from './pages/Error';
+// import Error from './pages/Error';
 
 function App() {
   return (
@@ -11,7 +11,7 @@ function App() {
         <Routes>
           <Route path="/" element={<Navigate replace to="/user/12" />} />
           <Route exact path="/user/:id/" element={<Home />} />
-          <Route path="*" element={<Error />} />
+          {/* <Route path="*" element={<Error />} /> */}
         </Routes>
       </BrowserRouter>
     </>

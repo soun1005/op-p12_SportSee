@@ -59,6 +59,7 @@ export default function useFetch() {
       })
       .catch((e) => {
         // when API fails
+        console.log(e);
         if (e.code === 'ERR_NETWORK') {
           const mockData = getMockData(parseInt(id, 10));
           // if there's no mock data found
