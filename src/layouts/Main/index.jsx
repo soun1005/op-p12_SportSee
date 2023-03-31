@@ -15,6 +15,11 @@ import { ReactComponent as ChickenIcon } from '../../assets/nutritionCardIcons/c
 import { ReactComponent as BurgerIcon } from '../../assets/nutritionCardIcons/cheeseburger-icon.svg';
 import DataSource from '../../components/DataSource';
 
+/**
+ * A React component that renders the main section of the page
+ * @returns {JSX.Element} - A JSX element displaying main components that requires dynamic values such as charts and nutrition cards
+ */
+
 export default function Main() {
   const { data, loading, dataSource } = useFetch();
 

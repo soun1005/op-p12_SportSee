@@ -8,9 +8,9 @@ import { useParams, useNavigate } from 'react-router-dom';
 const USER_URL = 'http://localhost:3000/user/';
 
 /**
- * A function to retrieve user information by given parameter
- * @param {Array<Object>} id - A unique ID to distinguish user and fetch correspond data
- * @returns {Array<Object>} Data in a form of object in each fields to display charts
+ * Retrieves user information by making multiple API requests
+ * @param {Array<Object>} id - The ID of the user to retrieve information for
+ * @returns {Promise<{user: object, activity: object, averageSessions: object, performance: object}>} - A promise that resolves to an object containing user information
  */
 
 const getUserInfo = async (id) => {
@@ -61,16 +61,14 @@ export default function useFetch() {
         const formattedData = globalFormat(formatApi);
         // then set data
         setData(formattedData);
-        console.log('using API');
       })
+
       // when API fails
       .catch((e) => {
         // if there is error code from API
         if (e.code === 'ERR_NETWORK') {
           // set mock data as mockData(and transform id string into number)
           const mockData = getMockData(parseInt(id, 10));
-
-          console.log('using mock data');
           setDataSource('Mock Data');
 
           // if there's no mock data found

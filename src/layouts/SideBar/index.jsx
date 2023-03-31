@@ -4,6 +4,11 @@ import { ReactComponent as Bike } from '../../assets/sidemenuIcons/bike-icon.svg
 import { ReactComponent as WeightTrain } from '../../assets/sidemenuIcons/weight-icon.svg';
 import style from './SideBar.module.css';
 
+/**
+ * A React component that renders the side bar of the page
+ * @returns {JSX.Element} - A JSX element to display side bar on the left side
+ */
+
 export default function SideBar() {
   return (
     <div className={style.sideBarContainer}>

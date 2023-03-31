@@ -1,9 +1,9 @@
 const days = ['L', 'M', 'M', 'J', 'V', 'S', 'D'];
 
 /**
- * A function that formats object data for session chart
- * @param {Array<Object>} sessions - session part of data that is passed to the function
- * @returns {Array<Object>} formatted values after mapping each objects of session
+ * A function that formats object data for average session chart
+ * @param {Array<Object>} sessions - average session data to be formatted
+ * @returns {Array<Object>} formatted data for average session chart
  */
 
 const averageSessionFormat = (sessions) => {

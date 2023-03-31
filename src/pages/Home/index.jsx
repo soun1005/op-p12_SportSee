@@ -4,6 +4,11 @@ import Header from '../../layouts/Header';
 import Main from '../../layouts/Main';
 import SideBar from '../../layouts/SideBar';
 
+/**
+ * A React component that renders home page
+ * @returns {JSX.Element} - A JSX element of combined components to display dashboard(Home)
+ */
+
 export default function Home() {
   return (
     <>

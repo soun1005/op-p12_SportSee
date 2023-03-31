@@ -1,6 +1,10 @@
 import { ReactComponent as Logo } from '../../assets/sportseelogo.svg';
 import style from './Header.module.css';
 
+/** A React component that renders the header section of the page
+ *@returns {JSX.Element} - A JSX element representing the header section of the page
+ */
+
 export default function Header() {
   return (
     <div className={style.container}>

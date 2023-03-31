@@ -12,9 +12,9 @@ const stringToNum = (date) => {
 };
 
 /**
- * A function that formats a date string to a number
- * @param {string} date - A string containing a date
- * @returns {number} A number formatted from the date string
+ * A function that formats data to display activity chart
+ * @param {Array<Object>} sessions - activity data to be formatted
+ * @returns {Array<Object>} formatted data for activity chart
  */
 
 const activityFormat = (sessions) => {

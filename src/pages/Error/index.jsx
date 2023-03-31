@@ -3,6 +3,11 @@ import style from './Error.module.css';
 import Header from '../../layouts/Header';
 import SideBar from '../../layouts/SideBar';
 
+/**
+ * A React component that renders the error page when a 404 error occurs
+ * @returns {JSX.Element} - A JSX element representing the error page
+ */
+
 export default function Error() {
   return (
     <div className={style.container}>

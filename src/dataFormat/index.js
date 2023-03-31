@@ -5,10 +5,10 @@ import scoreFormat from './scoreFormat';
 
 /**
  * A function that assigns each data objects into its formatting functions
- * @param {Array<Object>} activitySessions - an object data that contains data to display activity sessions
- *  * @param {Array<Object>} performances - an object data that contains data to display performance sessions
- *  * @param {Array<Object>} user - an object data that contains data to display user name
- *  * @param {Array<Object>} averageSessions - an object data that contains data to display average sessions
+ * @param {Array<Object>} activitySessions - data to display activity sessions
+ * @param {Array<Object>} performances - data to display performance sessions
+ * @param {Array<Object>} user - data to display user name
+ * @param {Array<Object>} averageSessions - data to display average sessions
  * @returns {Array<Object>} formatted values to be used as props to each chart components
  */
 
