@@ -15,8 +15,8 @@ export default function Header() {
         <ul>
           <li>Accueil</li>
           <li>Profil</li>
-          <li>Reglage</li>
-          <li>Communaute</li>
+          <li>Réglage</li>
+          <li>Communauté</li>
         </ul>
       </nav>
     </div>
