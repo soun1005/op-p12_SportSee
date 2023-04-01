@@ -1,0 +1,64 @@
+.container {
+  height: 100vh;
+  width: 100%;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.mainWrap {
+  margin-top: 4rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 26rem;
+}
+
+.title {
+  background-color: var(--bg);
+  padding: 10px 1rem;
+  border-radius: 5px;
+}
+
+.img {
+  width: 16rem;
+}
+
+.optionWrap {
+  /* background-color: rgb(157, 195, 227); */
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  height: 6rem;
+  justify-content: space-between;
+  margin-top: 1rem;
+}
+
+.buttonContainer {
+  display: flex;
+  width: 100%;
+  justify-content: space-between;
+}
+
+.loginBtn {
+  border: none;
+  background-color: var(--bg);
+  padding: 14px 70px;
+  border-radius: 5px;
+  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+  font-size: 14px;
+  font-weight: 700;
+  cursor: pointer;
+}
+
+.checkBoxWrap {
+  margin-top: 6rem;
+}
+
+.checkQuestion,
+.checkBoxWrap label {
+  font-size: 13px;
+}
