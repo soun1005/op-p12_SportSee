@@ -38,7 +38,7 @@ const formatApiResponse = (data) => {
 
 /**
  * A hook that fetches data
- * @returns {Array<Object>} three states in a form of object to manage data and loading
+ * @returns {Array<Object>} four states in a form of object to manage data, loading, data source and error
  */
 
 export default function useFetch() {
