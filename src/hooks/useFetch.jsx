@@ -60,37 +60,39 @@ export default function useFetch() {
 
     // When user select to use mock API
     if (apiParam === 'false') {
-      const formattedMockData = globalFormat(mockData);
-      setData(formattedMockData);
       setDataSource('Mock Data');
-    }
-    // API as data
-    // get user info by id caught by useParams from URL
-    getUserInfo(id)
-      .then((userInfos) => {
-        if (apiParam === 'true') {
+
+      if (mockData) {
+        const formattedMockData = globalFormat(mockData);
+        setData(formattedMockData);
+      } else {
+        navigate('/Error');
+      }
+    } else {
+      getUserInfo(id)
+        .then((userInfos) => {
           // first format matched data by breakpoints
           const formatApi = formatApiResponse(userInfos);
           // then using globalFormat, format data to display charts
           const formattedData = globalFormat(formatApi);
           // then set data
           setData(formattedData);
-        }
-      })
-      .catch((e) => {
-        console.log(e);
-        console.log(data);
-        // API error
-        if (e.response?.status === 404 && apiParam === 'true') {
-          console.log('user not found');
-          navigate('/Error');
-        }
+        })
+        .catch((e) => {
+          // API error
+          if (e.response?.status === 404 && apiParam === 'true') {
+            // console.log('user not found');
+            navigate('/Error');
+          }
 
-        // API error 2
-        if (e.code === 'ERR_NETWORK' && apiParam === 'true') {
-          setError('API disconnected');
-        }
-      });
+          // API error 2
+          if (e.code === 'ERR_NETWORK' && apiParam === 'true') {
+            setError('API disconnected');
+          }
+        });
+    }
+    // API as data
+    // get user info by id caught by useParams from URL
 
     setLoading(false);
   }, []);

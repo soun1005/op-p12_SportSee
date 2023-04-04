@@ -12,7 +12,7 @@ export default function Login() {
   const [check, setChecked] = useState(true);
 
   const searchParam = `?api=${check}`;
-  console.log(searchParam);
+  // console.log(searchParam);
 
   return (
     <div className={style.container}>
