@@ -62,3 +62,15 @@
 .checkBoxWrap label {
   font-size: 13px;
 }
+
+.secondQuestion {
+  font-size: 11px;
+}
+
+.questionWrap {
+  line-height: 0.8;
+}
+
+.checkBox {
+  margin-top: 10px;
+}

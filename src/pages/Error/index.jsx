@@ -24,7 +24,7 @@ export default function Error() {
             </span>
           </div>
           <NavLink to="/" className={style.linkToHome}>
-            Retourner sur le dashboard
+            Retourner sur la page de Login
           </NavLink>
         </div>
       </main>

@@ -2,7 +2,7 @@ import { useState, useEffect } from 'react';
 import axios from 'axios';
 import getMockData from '../assets/mockApi';
 import globalFormat from '../dataFormat';
-import { useParams, useNavigate } from 'react-router-dom';
+import { useParams, useNavigate, useSearchParams } from 'react-router-dom';
 
 // common part of breakpoint
 const USER_URL = 'http://localhost:3000/user/';
@@ -43,50 +43,57 @@ const formatApiResponse = (data) => {
 
 export default function useFetch() {
   const { id } = useParams();
+  const [searchParam] = useSearchParams();
+  // console.log(searchParam.get('api'));
+  const apiParam = searchParam.get('api');
   const navigate = useNavigate();
+  const mockData = getMockData(parseInt(id, 10));
 
   const [data, setData] = useState(null);
   const [loading, setLoading] = useState(false);
+  const [error, setError] = useState(null);
   const [dataSource, setDataSource] = useState('API');
 
   // when the page is loaded
   useEffect(() => {
     setLoading(true);
-    // get user info by id
+
+    // When user select to use mock API
+    if (apiParam === 'false') {
+      const formattedMockData = globalFormat(mockData);
+      setData(formattedMockData);
+      setDataSource('Mock Data');
+    }
+    // API as data
+    // get user info by id caught by useParams from URL
     getUserInfo(id)
       .then((userInfos) => {
-        // first format matched data by breakpoints
-        const formatApi = formatApiResponse(userInfos);
-        // then using globalFormat, format data to display charts
-        const formattedData = globalFormat(formatApi);
-        // then set data
-        setData(formattedData);
+        if (apiParam === 'true') {
+          // first format matched data by breakpoints
+          const formatApi = formatApiResponse(userInfos);
+          // then using globalFormat, format data to display charts
+          const formattedData = globalFormat(formatApi);
+          // then set data
+          setData(formattedData);
+        }
       })
-
-      // when API fails
       .catch((e) => {
-        // if there is error code from API
-        if (e.code === 'ERR_NETWORK') {
-          // set mock data as mockData(and transform id string into number)
-          const mockData = getMockData(parseInt(id, 10));
-          setDataSource('Mock Data');
-
-          // if there's no mock data found
-          if (!mockData) {
-            // setError('User not found');
-            navigate('/Error');
-          } else {
-            // instead of API, use mock data
-            const formattedMockData = globalFormat(mockData);
-            setData(formattedMockData);
-          }
-        } else {
+        console.log(e);
+        console.log(data);
+        // API error
+        if (e.response?.status === 404 && apiParam === 'true') {
+          console.log('user not found');
           navigate('/Error');
+        }
+
+        // API error 2
+        if (e.code === 'ERR_NETWORK' && apiParam === 'true') {
+          setError('API disconnected');
         }
       });
 
     setLoading(false);
   }, []);
 
-  return { data, loading, dataSource };
+  return { data, loading, dataSource, error };
 }
