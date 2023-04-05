@@ -24,11 +24,10 @@ export default function Main() {
   const { data, loading, error, dataSource } = useFetch();
 
   // loading + no error   or   no data + no error
-  // 데이터가 없고 에러도 없을때
   if ((loading || !data) && !error) {
     return <div>loading...</div>;
   }
-  // 에러가 나고 로딩이 없을때
+
   if (error && !loading) {
     return <div>{error}</div>;
   }

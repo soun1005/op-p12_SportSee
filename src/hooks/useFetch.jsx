@@ -81,7 +81,6 @@ export default function useFetch() {
         .catch((e) => {
           // API error
           if (e.response?.status === 404 && apiParam === 'true') {
-            // console.log('user not found');
             navigate('/Error');
           }
 

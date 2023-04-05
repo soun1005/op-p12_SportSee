@@ -4,11 +4,10 @@
  * @returns {number} A number formatted from the date string
  */
 
-const stringToNum = (date) => {
-  // getDate()
-  const lastNumber = date.charAt(date.length - 1);
-  const toNum = parseInt(lastNumber);
-  return toNum;
+const dayToDate = (date) => {
+  const d = new Date(date);
+  let day = d.getDate();
+  return day;
 };
 
 /**
@@ -22,7 +21,7 @@ const activityFormat = (sessions) => {
   return sessions.map(({ day, kilogram, calories }) => ({
     // day, kilogram, calories : 차트 만드는데 필요한 키밸류
     // day의 값을 새로운 값으로 재지정
-    day: stringToNum(day),
+    day: dayToDate(day),
     kilogram,
     calories,
   }));
