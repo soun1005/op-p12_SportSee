@@ -21,7 +21,7 @@ export default function Login() {
       </div>
       <div className={style.mainWrap}>
         <div className={style.title}>
-          <h2>Choose a user to connect to dashboard</h2>
+          <h2>Choisir un utilisateur pour se connecter au dashboard</h2>
         </div>
         <div className={style.optionWrap}>
           <div className={style.checkBoxWrap}>
@@ -31,33 +31,28 @@ export default function Login() {
               </span>
               <span className={style.secondQuestion}>
                 Décochez si vous voulez utiliser Mock API
+                <br />
+                <br />
               </span>
-              <br />
             </div>
-            <form>
-              <input
-                type="checkbox"
-                id="apiBtn"
-                name="dataType"
-                className={style.checkBox}
-                onChange={(e) => setChecked(e.target.checked)}
-                checked={check}
-              />
-              <label htmlFor="apiBtn">Oui</label>
-              <div className={style.buttonContainer}>
-                {users.map((user) => (
-                  <NavLink to={`user/${user.id}${searchParam}`} key={user.id}>
-                    <button
-                      key={user.id}
-                      className={style.loginBtn}
-                      type="submit"
-                    >
-                      {user.userName}
-                    </button>
-                  </NavLink>
-                ))}
-              </div>
-            </form>
+            <input
+              type="checkbox"
+              id="apiBtn"
+              name="dataType"
+              className={style.checkBox}
+              onChange={(e) => setChecked(e.target.checked)}
+              checked={check}
+            />
+            <label htmlFor="apiBtn">Oui</label>
+            <div className={style.buttonContainer}>
+              {users.map((user) => (
+                <NavLink to={`user/${user.id}${searchParam}`} key={user.id}>
+                  <button key={user.id} className={style.loginBtn}>
+                    {user.userName}
+                  </button>
+                </NavLink>
+              ))}
+            </div>
           </div>
         </div>
       </div>

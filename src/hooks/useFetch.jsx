@@ -44,7 +44,6 @@ const formatApiResponse = (data) => {
 export default function useFetch() {
   const { id } = useParams();
   const [searchParam] = useSearchParams();
-  // console.log(searchParam.get('api'));
   const apiParam = searchParam.get('api');
   const navigate = useNavigate();
   const mockData = getMockData(parseInt(id, 10));
