@@ -2,9 +2,7 @@
 # Openclassrooms project 12 - SportSee
 
 
-
-
-![Logo](https://github.com/soun1005/op-p12_SportSee/blob/main/source/assets/demo.png)
+![App Screenshot](https://github.com/soun1005/op-p12_SportSee/blob/main/source/assets/demo.png)
 
 ## Requirements
 
@@ -66,11 +64,12 @@ Start the server
 ```bash
   npm start
 ```
+---
 
 if you see this message,
 
 ```bash
   Would you like to run the app on another port instead? › (Y/n)
 ```
-   Press Y to say Yes
+    Press Y to say Yes
 
