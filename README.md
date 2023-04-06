@@ -1,9 +1,6 @@
 
 # Openclassrooms project 12 - SportSee
-
-
 ![demo](https://user-images.githubusercontent.com/79379473/230331003-cce31960-5ea1-4e55-923c-9817f55024ce.png)
-
 ## Requirements
 
   - [NodeJS (**version 12.18**)](https://nodejs.org/en/)
