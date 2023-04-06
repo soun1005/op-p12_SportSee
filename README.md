@@ -6,12 +6,12 @@
 ## Deployment
 
 
-### Requirements
+### 1. Requirements
 
   - [NodeJS (**version 12.18**)](https://nodejs.org/en/)
 
 
-### Installation - Backend
+### 2. Installation - Backend
 
 
  Fork this [repository(click this)](https://github.com/OpenClassrooms-Student-Center/P9-front-end-dashboard)
@@ -43,7 +43,7 @@ Start the server
 
 ---
 
-### Installation - Frontend
+### 3. Installation - Frontend
 
 Clone the project
 
