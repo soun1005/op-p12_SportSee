@@ -1,11 +1,20 @@
 
 # Openclassrooms project 12 - SportSee
 ![스크린샷 2023-04-06 11 16 04](https://user-images.githubusercontent.com/79379473/230332354-f1923ebc-f6c5-4ee7-8267-eb407bb54c3b.png)
-## Requirements
+
+---
+
+## Deployment
+
+---
+
+### Requirements
 
   - [NodeJS (**version 12.18**)](https://nodejs.org/en/)
 
-## Installation - Backend
+---
+
+### Installation - Backend
 
 
  Fork this [repository(click this)](https://github.com/OpenClassrooms-Student-Center/P9-front-end-dashboard)
@@ -35,8 +44,9 @@ Start the server
   yarn dev
 ```
 
+---
 
-## Installation - Frontend
+### Installation - Frontend
 
 Clone the project
 
@@ -61,7 +71,7 @@ Start the server
 ```bash
   npm start
 ```
----
+<br>
 
 if you see this message,
 
