@@ -7,15 +7,13 @@
 
 ## Project overview
 
+![JavaScript](https://img.shields.io/badge/Language-JS-ff69b4) ![REACT](https://img.shields.io/badge/Framework-React-69cc8d) ![CSS Module](https://img.shields.io/badge/Style-CSSModule-ffa08d) ![Rechart](https://img.shields.io/badge/Graph-Rechart-58c3fd)
 
  ##### 1. Developped with React JS.
  ##### 2. Sport activity charts made with the react library, Recarts.
  ##### 3. Documentated by JS Doc.
 
 <br />  
-
-![JavaScript](https://img.shields.io/badge/Language-JS-ff69b4) ![REACT](https://img.shields.io/badge/Framework-React-69cc8d) ![CSS Module](https://img.shields.io/badge/Style-CSSModule-ffa08d) ![Rechart](https://img.shields.io/badge/Graph-Rechart-58c3fd)
-
 
 ## Deployment
 
