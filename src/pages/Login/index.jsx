@@ -8,11 +8,15 @@ const users = [
   { id: 18, userName: 'User 18' },
 ];
 
+/**
+ * A React component that renders login page
+ * @returns {JSX.Element} - A JSX element of combined components to display login page
+ */
+
 export default function Login() {
   const [check, setChecked] = useState(true);
 
   const searchParam = `?api=${check}`;
-  // console.log(searchParam);
 
   return (
     <div className={style.container}>
