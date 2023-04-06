@@ -9,19 +9,19 @@
 
 ![JavaScript](https://img.shields.io/badge/Language-JS-ff69b4) ![REACT](https://img.shields.io/badge/Framework-React-69cc8d) ![CSS Module](https://img.shields.io/badge/Style-CSSModule-ffa08d) ![Rechart](https://img.shields.io/badge/Graph-Recharts-58c3fd)
 
- ##### 1. Developped with React JS.
- ##### 2. Sport activity charts made with the react library, Recharts.
- ##### 3. Documentated by JS Doc
+ ##### - Developped with React JS.
+ ##### - Sport activity charts made with the react library, Recharts.
+ ##### - Documentated by JS Doc
 
-## Deployment
+# Deployment
 
 
-### 1. Requirements
+## 1. Requirements
 
   - [NodeJS (**version 12.18**)](https://nodejs.org/en/)
 
 
-### 2. Installation - Backend
+## 2. Installation - Backend
 
 
  Fork this [repository(click this)](https://github.com/OpenClassrooms-Student-Center/P9-front-end-dashboard)
@@ -53,7 +53,7 @@ Start the server
 
 ---
 
-### 3. Installation - Frontend
+## 3. Installation - Frontend
 
 Clone the project
 
