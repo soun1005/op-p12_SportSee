@@ -1,5 +1,6 @@
 
 # Openclassrooms project 12 - SportSee
+![sportsee letter logo](https://user-images.githubusercontent.com/79379473/230331807-e3de0025-dc15-4220-9a16-afb935d3c428.png)
 ![demo](https://user-images.githubusercontent.com/79379473/230331003-cce31960-5ea1-4e55-923c-9817f55024ce.png)
 ## Requirements
 
