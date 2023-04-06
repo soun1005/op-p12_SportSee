@@ -2,7 +2,7 @@
 # Openclassrooms project 12 - SportSee
 
 
-![App Screenshot](https://github.com/soun1005/op-p12_SportSee/blob/main/source/assets/demo.png?raw=true)
+![demo](https://user-images.githubusercontent.com/79379473/230331003-cce31960-5ea1-4e55-923c-9817f55024ce.png)
 
 ## Requirements
 
