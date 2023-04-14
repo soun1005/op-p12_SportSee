@@ -2,7 +2,7 @@
 # Openclassrooms project 12 - SportSee
 ![스크린샷 2023-04-06 11 16 04](https://user-images.githubusercontent.com/79379473/230332354-f1923ebc-f6c5-4ee7-8267-eb407bb54c3b.png)
 \
-==> [Visit the website](https://lustrous-muffin-df6952.netlify.app/) <==
+==> [Visit the website](https://sportseesoeunlee.netlify.app/) <==
 
 
 ## Project overview
